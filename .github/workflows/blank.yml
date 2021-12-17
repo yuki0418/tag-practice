@@ -27,7 +27,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: dev
+    environment: stg
     steps:
       - uses: actions/checkout@v2
 
@@ -37,4 +37,4 @@ jobs:
           echo "Dinner: ${{ github.event.inputs.dinner }}"
           echo "Is Large?: ${{ github.event.inputs.is-large }}"
           echo "Selected Env: ${{ github.event.inputs.environment }}"
-          echo "APP_ENV: $APP_ENV"
+          echo "APP_ENV: ${{ secrets.APP_ENV }}"
