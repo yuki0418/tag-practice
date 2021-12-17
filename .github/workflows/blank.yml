@@ -37,3 +37,4 @@ jobs:
           echo "Dinner: ${{ github.event.inputs.dinner }}"
           echo "Is Large?: ${{ github.event.inputs.is-large }}"
           echo "Selected Env: ${{ github.event.inputs.environment }}"
+          echo $APP_ENV
