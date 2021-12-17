@@ -20,8 +20,6 @@ on:
          - dev
          - stg
          - prd
-     message:
-        required: true
       use-emoji:
         type: boolean
         description: Include 🎉🤣 emojis
