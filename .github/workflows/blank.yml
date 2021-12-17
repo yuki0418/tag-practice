@@ -30,9 +30,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
+      # Display selected values
       - name: Dinner
         run: |
-          echo "Dinner\: ${{ github.event.inpouts.dinner }}"
-          echo "Is Large?\: ${{ github.event.inpouts.is-large }}"
-          echo "Selected Env\: ${{ github.event.inpouts.environment }}"
+          echo "Dinner\: ${{ github.event.inputs.dinner }}"
+          echo "Is Large?\: ${{ github.event.inouts.is-large }}"
+          echo "Selected Env\: ${{ github.event.inputs.environment }}"
