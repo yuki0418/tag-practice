@@ -27,12 +27,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
     steps:
       - uses: actions/checkout@v2
 
       # Display selected values
-      - name: Dinner
+      - name: Selections
         run: |
-          echo "Dinner\: ${{ github.event.inputs.dinner }}"
-          echo "Is Large?\: ${{ github.event.inouts.is-large }}"
-          echo "Selected Env\: ${{ github.event.inputs.environment }}"
+          echo "Dinner: ${{ github.event.inputs.dinner }}"
+          echo "Is Large?: ${{ github.event.inputs.is-large }}"
+          echo "Selected Env: ${{ github.event.inputs.environment }}"
