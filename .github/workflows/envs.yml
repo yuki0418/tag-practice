@@ -30,6 +30,8 @@ jobs:
     environment: ${{ github.event.inputs.environment }}
     steps:
       - uses: actions/checkout@v2
+        env:
+          APP_ENV: ${{ secrets.APP_ENV }}
 
       # Display selected values
       - name: Selections
